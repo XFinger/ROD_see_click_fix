@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  var closed_issue =  <%= @closed %> ;
+  var open_issue =  <%= @open %> ;
+  var acknowledged_issue = <%= @acknowledged %>;
+</script>
+ 
+<div id="map"></div>
+<div id = "block">	
+	 
+	Open: <%=@count_open %><br>
+	Acknowledged: <%=@count_ack%><br>
+	Closed: <%=@count_closed%><br>
+	Archived: <%=@count_arc%><br />
+ 
+	 <br /><%=@this%>
+	 
+</div>	
+ 

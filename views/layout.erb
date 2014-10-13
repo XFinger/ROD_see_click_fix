@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><%= @page_title %></title>
+        <meta name="description" content="<%= @page_description %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+ 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/map.css">
+        <link rel="stylesheet" href="/css/main.css">
+       	<link rel="stylesheet" href="/js/vendor/leaflet.groupedlayercontrol.css">
+
+
+
+        
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+ 
+        <!-- Add your site or application content here -->
+        <%= yield %>
+ 
+        <script src="/js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="/js/vendor/jquery-ui.min.js"></script>
+        <script src="/js/plugins.js"></script>
+        
+ 		
+ 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+ 		<script src="/js/leaflet.SliderControl.min.js"></script>
+ 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDygBIS72Cp8rx9jrqJL20yg9gB7gWTq9w"  type="text/javascript"></script>
+ 		<script src="/js/leaflet-google.js"></script>
+ 		<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+ 		<script src="/js/vendor/leaflet.groupedlayercontrol.js"></script>
+ 		<script src="/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+source "http://rubygems.org"
+
+gem "sinatra"
+gem 'soda-ruby', :require => 'soda'
+gem 'sqlite3'
+gem 'json'
+gem 'configatron' 
+gem 'hashie'
+gem 'httparty'
+gem 'awesome_print'
+gem 'jsonpath'
+gem 'sinatra-activerecord'
+gem 'leaflet-rails' 
+gem 'crack'
+gem 'thin'
+gem 'gon-sinatra'
+gem 'shotgun'
+gem 'rabl'
+gem 'sinatra-initializers'
+gem 'oj'
+gem 'fastercsv'
+gem 'grape'
+gem 'grape-swagger'
