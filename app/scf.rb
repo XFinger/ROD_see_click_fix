@@ -1,34 +1,28 @@
 require "bundler/setup"
 require 'rubygems'
 require 'sinatra'
-require 'gon-sinatra' 
+require 'sinatra-initializers' 
 require 'sinatra/activerecord'
+require 'sinatra/base'
+require 'sinatra/assetpack'
 require './environments'
 require './models/issue'  
 require 'json'
-require 'sinatra-initializers'
 require 'rabl'
 require 'active_support/core_ext'
 require 'active_support/inflector'
 require 'builder'
-require 'bigdecimal' 
+require './lib/decimal_helper' 
 require 'oj'
-require_relative './config/rabl.rb'
+require 'grape'
+require_relative '../config/rabl.rb'
+
  
  Rabl.register!
- Sinatra::register Gon::Sinatra
- Sinatra::register Gon::Sinatra::Rabl
-
-class BigDecimal
-  def as_json(options = nil) #:nodoc:
-    if finite?
-      self
-    else
-      NilClass::AS_JSON
-    end
-  end
-end
  
+class Scf < Sinatra::Base 
+
+
 
 get '/' do
   
@@ -43,24 +37,25 @@ get '/' do
   @closed_issues= Issue.is_closed
   @open_issues= Issue.is_open#.is_on(@thedate)
   @ack_issues = Issue.is_ack 
+  @all_issues = Issue.is_open 
   @open = rabl :open
   @closed = rabl :closed
   @acknowledged = rabl :ack
- 
+  @all = rabl :all
+  
+  
   @page_title = "Welcome Page"
   erb :welcome
 end
-get '/api/closed_issues.geojson' do
-  @closed_issues = Issue.is_closed
-  rabl :closed
-end 
-get '/api/open_issues.geojson' do
-  @open_issues = Issue.is_open
-  rabl :open
-end 
-get '/api/acknowledged_issues.geojson' do
-  @ack_issues= Issue.is_ack
-  rabl :ack
-end 
-  
+
+
+end
+ 
+
+
+ 
+
+
+ 
+ 
 

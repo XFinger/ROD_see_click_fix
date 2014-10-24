@@ -1,5 +1,4 @@
 DB=ActiveRecord::Base.establish_connection(
  :adapter  => 'sqlite3',
- :database => './scripts/seeCF2.db'
+ :database => './rod_scripts/seeCF2.db'
 )
-

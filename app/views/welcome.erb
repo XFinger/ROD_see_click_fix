@@ -2,6 +2,8 @@
   var closed_issue =  <%= @closed %> ;
   var open_issue =  <%= @open %> ;
   var acknowledged_issue = <%= @acknowledged %>;
+  var all_marks = <%= @all %>;
+ 
 </script>
  
 <div id="map"></div>
@@ -11,8 +13,7 @@
 	Acknowledged: <%=@count_ack%><br>
 	Closed: <%=@count_closed%><br>
 	Archived: <%=@count_arc%><br />
- 
-	 <br /><%=@this%>
+ <%=@all.size%>
 	 
 </div>	
  

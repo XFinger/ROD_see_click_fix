@@ -40,7 +40,7 @@ while @counter<=5 do
        @url = a["url"]
        @user_id = a["reporter"]["id"]
        @created_at = a["created_at"]
-       @updated_at = a["updated_at_raw"]
+       @updated_at = a["updated_at"]
        @acknowledged_at = a["acknowledged_at"]
        @closed_at = a["closed_at"]
 

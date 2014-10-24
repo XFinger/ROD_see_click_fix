@@ -1,0 +1,6 @@
+#ignore public temp dir
+/public/temp/*
+
+
+#ignore configitron file
+/config/defaults.rb
