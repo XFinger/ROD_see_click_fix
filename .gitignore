@@ -3,4 +3,4 @@
 
 
 #ignore configitron file
-/config/defaults.rb
+/lib/defaults.rb
